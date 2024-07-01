@@ -1,0 +1,16 @@
+<!-- core/templates/core/carrinho.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrinho</title>
+</head>
+<body>
+    <h1>Seu Carrinho</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto.nome }} - {{ produto.preco }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Continuar Comprando</a>
+</body>
+</html>

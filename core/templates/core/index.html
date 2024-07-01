@@ -1,0 +1,17 @@
+<!-- core/templates/core/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Online</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <a href="{% url 'detalhe_produto' produto.id %}">{{ produto.nome }}</a> - {{ produto.preco }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

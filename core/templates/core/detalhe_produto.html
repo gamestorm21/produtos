@@ -1,0 +1,16 @@
+<!-- core/templates/core/detalhe_produto.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ produto.nome }}</title>
+</head>
+<body>
+    <h1>{{ produto.nome }}</h1>
+    <p>{{ produto.descricao }}</p>
+    <p>Preço: {{ produto.preco }}</p>
+    <form action="{% url 'adicionar_ao_carrinho' produto.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Adicionar ao Carrinho</button>
+    </form>
+</body>
+</html>
